@@ -1,0 +1,671 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Detector de deadlock: Referência do Arquivo Sistemas Operacionais/Detector de deadlock/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Detector de deadlock
+   </div>
+   <div id="projectbrief">Trabalho da matéria de Sistemas Operacionais</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0fb0ad2b225a8688bb27592a7cbb0da2.html">Sistemas Operacionais</a></li><li class="navelem"><a class="el" href="dir_980721d0317f4c91dab83f09c2e35efa.html">Detector de deadlock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo main.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="string_8h_source.html">string.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="vector_8h_source.html">vector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="thread_8h_source.html">thread.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multiplas_instancias_8h_source.html">multiplasInstancias.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a993dd874d7b3865c6efedd936a90845e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a993dd874d7b3865c6efedd936a90845e">stringInicioThread</a>&#160;&#160;&#160;&quot;thread \0&quot;       /*&lt; Parte da string de criação de uma <a class="el" href="structthread.html">thread</a>*/</td></tr>
+<tr class="separator:a993dd874d7b3865c6efedd936a90845e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6d276174f8d4a84f2a130ca610cfa2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5c6d276174f8d4a84f2a130ca610cfa2">stringSolicitaRecurso</a>&#160;&#160;&#160;&quot;p \0&quot;         /*&lt; Parte da string de solicitação de recurso */</td></tr>
+<tr class="separator:a5c6d276174f8d4a84f2a130ca610cfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae074cf68315e901e6d37ae6709906b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aae074cf68315e901e6d37ae6709906b0">stringLiberaRecurso</a>&#160;&#160;&#160;&quot;v \0&quot;           /*&lt; Parte da string de liberação de recurso */</td></tr>
+<tr class="separator:aae074cf68315e901e6d37ae6709906b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a7de90cfbdf9fc4bf9565f0b655d930ba"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7de90cfbdf9fc4bf9565f0b655d930ba">verificaOperacao</a> (char *linha, int *operacao)</td></tr>
+<tr class="separator:a7de90cfbdf9fc4bf9565f0b655d930ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ba232f6f27248e36639940a5e78b8d"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af7ba232f6f27248e36639940a5e78b8d">preencheDisponivel</a> (char *linha, int *lenDisponivel)</td></tr>
+<tr class="separator:af7ba232f6f27248e36639940a5e78b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fc845e4761b71d8535e29bf4b23f1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">MultiplasInstancias</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a96fc845e4761b71d8535e29bf4b23f1d">executaOperacao</a> (<a class="el" href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">MultiplasInstancias</a> *m, int linhaExecucao, int processo, <a class="el" href="thread_8h.html#a0cadebd7be5c021d014225d714ed2556">Thread</a> *<a class="el" href="structthread.html">thread</a>, int *deadlock, int *executou)</td></tr>
+<tr class="separator:a96fc845e4761b71d8535e29bf4b23f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6233ed1d6c18051a718dc2f2ad2d3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8a6233ed1d6c18051a718dc2f2ad2d3d">geraSaida</a> (<a class="el" href="thread_8h.html#a0cadebd7be5c021d014225d714ed2556">Thread</a> **threads, int *vetorPermutacao, int *linhaExecucao, int quantThreads)</td></tr>
+<tr class="separator:a8a6233ed1d6c18051a718dc2f2ad2d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8da4d3828848e346f5d8a378b44d9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad8da4d3828848e346f5d8a378b44d9e6">testaDeadlock</a> (int *disponiveis, int quantThread, int lenDisponiveis, int maximoLinhas, <a class="el" href="thread_8h.html#a0cadebd7be5c021d014225d714ed2556">Thread</a> **threads)</td></tr>
+<tr class="separator:ad8da4d3828848e346f5d8a378b44d9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Ailton José Brandão Junior </dd>
+<dd>
+Pedro Antônio Ferreira Sant' Ana </dd>
+<dd>
+Jothan Rodrigues de Almeida </dd></dl>
+<dl class="section version"><dt>Versão</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2022-08-12</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a id="a993dd874d7b3865c6efedd936a90845e" name="a993dd874d7b3865c6efedd936a90845e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993dd874d7b3865c6efedd936a90845e">&#9670;&nbsp;</a></span>stringInicioThread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define stringInicioThread&#160;&#160;&#160;&quot;thread \0&quot;       /*&lt; Parte da string de criação de uma <a class="el" href="structthread.html">thread</a>*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae074cf68315e901e6d37ae6709906b0" name="aae074cf68315e901e6d37ae6709906b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae074cf68315e901e6d37ae6709906b0">&#9670;&nbsp;</a></span>stringLiberaRecurso</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define stringLiberaRecurso&#160;&#160;&#160;&quot;v \0&quot;           /*&lt; Parte da string de liberação de recurso */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c6d276174f8d4a84f2a130ca610cfa2" name="a5c6d276174f8d4a84f2a130ca610cfa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c6d276174f8d4a84f2a130ca610cfa2">&#9670;&nbsp;</a></span>stringSolicitaRecurso</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define stringSolicitaRecurso&#160;&#160;&#160;&quot;p \0&quot;         /*&lt; Parte da string de solicitação de recurso */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a96fc845e4761b71d8535e29bf4b23f1d" name="a96fc845e4761b71d8535e29bf4b23f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96fc845e4761b71d8535e29bf4b23f1d">&#9670;&nbsp;</a></span>executaOperacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">MultiplasInstancias</a> * executaOperacao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">MultiplasInstancias</a> *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>linhaExecucao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>processo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="thread_8h.html#a0cadebd7be5c021d014225d714ed2556">Thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>deadlock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>executou</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Função responsável por executar as operações realizadas por cada thread. Em caso de números superiores a zero (positivos), representam a solicitação de um recurso. Caso contrário (negativos), representam a liberação de um recurso. </p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                                                                                           {</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">if</span>(linhaExecucao &gt;= <a class="code hl_struct" href="structthread.html">thread</a>-&gt;<a class="code hl_variable" href="structthread.html#a02ca9918e129ba3c61e4b97b3b58e5f1">quantidadeLinhas</a>)</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> m;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span>(<a class="code hl_struct" href="structthread.html">thread</a>-&gt;<a class="code hl_variable" href="structthread.html#a579493449eb1f854cd6e4ccd8cd99924">operacoes</a>[0][linhaExecucao] &gt; 0){ <span class="comment">/* A thread está solicitando recurso */</span></div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordtype">int</span> solicitacao[m-&gt;<a class="code hl_variable" href="structmultiplas_instancias.html#a0bdb5f9cfb962b5d70c4b07c3afa7e31">quantRecursos</a>];</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structmultiplas_instancias.html#a0bdb5f9cfb962b5d70c4b07c3afa7e31">quantRecursos</a>; i++)</div>
+<div class="line"><span class="lineno">  109</span>            solicitacao[i] = 0;</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>        solicitacao[<a class="code hl_struct" href="structthread.html">thread</a>-&gt;<a class="code hl_variable" href="structthread.html#a579493449eb1f854cd6e4ccd8cd99924">operacoes</a>[0][linhaExecucao] - 1] = 1;</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="multiplas_instancias_8c.html#a5fd1a3332f43e34d99a28784039cd070">solicitaRecurso</a>(m, processo, solicitacao, deadlock, executou);</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">else</span>   <span class="comment">/*A thread está liberando recurso*/</span></div>
+<div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        *executou = 1;</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="multiplas_instancias_8c.html#a9cd97921ca05fafb9ce4bb6419d88f1e">desalocaRecurso</a>(m, processo, -1*(<a class="code hl_struct" href="structthread.html">thread</a>-&gt;<a class="code hl_variable" href="structthread.html#a579493449eb1f854cd6e4ccd8cd99924">operacoes</a>[0][linhaExecucao] + 1));</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>}</div>
+<div class="ttc" id="amultiplas_instancias_8c_html_a5fd1a3332f43e34d99a28784039cd070"><div class="ttname"><a href="multiplas_instancias_8c.html#a5fd1a3332f43e34d99a28784039cd070">solicitaRecurso</a></div><div class="ttdeci">MultiplasInstancias * solicitaRecurso(MultiplasInstancias *m, int processo, int *solicitacao, int *deadlock, int *executou)</div><div class="ttdoc">Função usada para solicitar um recurso para um processo. Conta com uma função auxiliar para verificar...</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:83</div></div>
+<div class="ttc" id="amultiplas_instancias_8c_html_a9cd97921ca05fafb9ce4bb6419d88f1e"><div class="ttname"><a href="multiplas_instancias_8c.html#a9cd97921ca05fafb9ce4bb6419d88f1e">desalocaRecurso</a></div><div class="ttdeci">MultiplasInstancias * desalocaRecurso(MultiplasInstancias *m, int processo, int recurso)</div><div class="ttdoc">Função utilizada para liberar um recurso que o processo está retendo.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:116</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html_a0bdb5f9cfb962b5d70c4b07c3afa7e31"><div class="ttname"><a href="structmultiplas_instancias.html#a0bdb5f9cfb962b5d70c4b07c3afa7e31">multiplasInstancias::quantRecursos</a></div><div class="ttdeci">int quantRecursos</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:12</div></div>
+<div class="ttc" id="astructthread_html"><div class="ttname"><a href="structthread.html">thread</a></div><div class="ttdoc">Tipo Abstrato de Dados para controle de informações da thread.</div><div class="ttdef"><b>Definition:</b> thread.h:5</div></div>
+<div class="ttc" id="astructthread_html_a02ca9918e129ba3c61e4b97b3b58e5f1"><div class="ttname"><a href="structthread.html#a02ca9918e129ba3c61e4b97b3b58e5f1">thread::quantidadeLinhas</a></div><div class="ttdeci">int quantidadeLinhas</div><div class="ttdef"><b>Definition:</b> thread.h:9</div></div>
+<div class="ttc" id="astructthread_html_a579493449eb1f854cd6e4ccd8cd99924"><div class="ttname"><a href="structthread.html#a579493449eb1f854cd6e4ccd8cd99924">thread::operacoes</a></div><div class="ttdeci">int ** operacoes</div><div class="ttdef"><b>Definition:</b> thread.h:7</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8a6233ed1d6c18051a718dc2f2ad2d3d" name="a8a6233ed1d6c18051a718dc2f2ad2d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6233ed1d6c18051a718dc2f2ad2d3d">&#9670;&nbsp;</a></span>geraSaida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geraSaida </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="thread_8h.html#a0cadebd7be5c021d014225d714ed2556">Thread</a> **&#160;</td>
+          <td class="paramname"><em>threads</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>vetorPermutacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>linhaExecucao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>quantThreads</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Em caso de deadlock, esta função é responsável por imprimir a saída como requerida. Imprime cada passo, por sua vez, com o nome de uma thread e o comando que ela executou (incluindo todos os caracteres de tabulação que o precederem em sua linha), separados por um caracter dois pontos (“:”). </p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordtype">int</span> *vetorAux = calloc(quantThreads, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)); <span class="comment">/* Vetor responsável por garantir a impressão de somente os processos</span></div>
+<div class="line"><span class="lineno">  130</span><span class="comment">                                                          que ocasionaram o deadlock */</span></div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">while</span>(!<a class="code hl_function" href="vector_8h.html#afa20a85d32e51f3b031d0c2fea0cc5c1">igual</a>(vetorAux, linhaExecucao, quantThreads)){</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; quantThreads; i++){</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span>(vetorAux[i] &lt; linhaExecucao[i]){</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; vetorPermutacao[i]; j++){</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>                    printf(<span class="stringliteral">&quot;%s:&quot;</span>, threads[i]-&gt;nome); <span class="comment">/*Imprime o nome da thread*/</span></div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l = 0; l &lt; threads[i]-&gt;<a class="code hl_variable" href="structthread.html#a0345f28d19e031eabf18b5d98a931fda">identacao</a>[0][vetorAux[i]]; l++)</div>
+<div class="line"><span class="lineno">  141</span>                        printf(<span class="stringliteral">&quot;\t&quot;</span>);                                               <span class="comment">/*Identação*/</span></div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>                    <span class="keywordflow">if</span>(threads[i]-&gt;operacoes[0][vetorAux[i]] &gt; 0)</div>
+<div class="line"><span class="lineno">  144</span>                        printf(<span class="stringliteral">&quot;p %i\n&quot;</span>, threads[i]-&gt;operacoes[0][vetorAux[i]] - 1); <span class="comment">/* Imprime quando a operação é de solicitação */</span></div>
+<div class="line"><span class="lineno">  145</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  146</span>                        printf(<span class="stringliteral">&quot;v %i\n&quot;</span>, (-1*threads[i]-&gt;operacoes[0][vetorAux[i]]) - 1); <span class="comment">/* Imprime quando a operação é de liberação */</span></div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>                    vetorAux[i]++;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>                    <span class="keywordflow">if</span>(vetorAux[i] == linhaExecucao[i])</div>
+<div class="line"><span class="lineno">  151</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  152</span>                }</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="line"><span class="lineno">  156</span>    free(vetorAux);</div>
+<div class="line"><span class="lineno">  157</span>}</div>
+<div class="ttc" id="astructthread_html_a0345f28d19e031eabf18b5d98a931fda"><div class="ttname"><a href="structthread.html#a0345f28d19e031eabf18b5d98a931fda">thread::identacao</a></div><div class="ttdeci">int ** identacao</div><div class="ttdef"><b>Definition:</b> thread.h:8</div></div>
+<div class="ttc" id="avector_8h_html_afa20a85d32e51f3b031d0c2fea0cc5c1"><div class="ttname"><a href="vector_8h.html#afa20a85d32e51f3b031d0c2fea0cc5c1">igual</a></div><div class="ttdeci">int igual(int *vet1, int *vet2, int len)</div><div class="ttdoc">Verifica se todos os elementos do vetor1 são iguais aos do vetor 2. Caso sejam, retorna 1....</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  231</span>          {</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    <span class="comment">/* Declaração das variávies */</span></div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordtype">char</span> *linha = NULL, *retorno = NULL;</div>
+<div class="line"><span class="lineno">  235</span>    <span class="keywordtype">int</span> quantThreads = 0, quantidadeMaximaLinhas = 0, operacao = 0, *disponiveis = NULL, lenDisponiveis = 0</div>
+<div class="line"><span class="lineno">  236</span>    ,*vetorOperacoes = NULL, identacao = 0, recursoInt = 0, eof = 0, *vetorIdentacao = NULL;</div>
+<div class="line"><span class="lineno">  237</span>    <a class="code hl_struct" href="structthread.html">Thread</a> **threads = NULL;</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">do</span>{</div>
+<div class="line"><span class="lineno">  240</span>        identacao = 0;</div>
+<div class="line"><span class="lineno">  241</span>        linha = <a class="code hl_function" href="string_8h.html#aaac0aa388d02ee09309f51247c8134f9">leLinha</a>(&amp;identacao, &amp;eof);</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>        retorno = <a class="code hl_function" href="main_8c.html#a7de90cfbdf9fc4bf9565f0b655d930ba">verificaOperacao</a>(linha, &amp;operacao); <span class="comment">/* verificando qual operação foi solicitada */</span></div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">if</span>(operacao == 1){                            <span class="comment">/* Inicialização de nova thread */</span></div>
+<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">if</span>(quantThreads &gt; 0){</div>
+<div class="line"><span class="lineno">  246</span>                threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a579493449eb1f854cd6e4ccd8cd99924">operacoes</a> = <a class="code hl_function" href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a>(threads[quantThreads-1]-&gt;operacoes, vetorOperacoes, 0, threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  247</span>                free(vetorOperacoes);</div>
+<div class="line"><span class="lineno">  248</span>                vetorOperacoes = NULL;</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>                threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a0345f28d19e031eabf18b5d98a931fda">identacao</a> = <a class="code hl_function" href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a>(threads[quantThreads-1]-&gt;identacao, vetorIdentacao, 0, threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  251</span>                free(vetorIdentacao);</div>
+<div class="line"><span class="lineno">  252</span>                vetorIdentacao = NULL;</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>                <span class="comment">/* Definindo a maior quantidade de linhas de uma thread */</span></div>
+<div class="line"><span class="lineno">  255</span>                <span class="keywordflow">if</span>(threads[quantThreads-1]-&gt;quantidadeLinhas &gt; quantidadeMaximaLinhas)</div>
+<div class="line"><span class="lineno">  256</span>                    quantidadeMaximaLinhas = threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a02ca9918e129ba3c61e4b97b3b58e5f1">quantidadeLinhas</a>;</div>
+<div class="line"><span class="lineno">  257</span>            }</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>            <span class="comment">/* Inicializando as variáveis da nova thread */</span></div>
+<div class="line"><span class="lineno">  260</span>            threads = realloc(threads, (quantThreads + 1) * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structthread.html">Thread</a>*));</div>
+<div class="line"><span class="lineno">  261</span>            threads[quantThreads] = <a class="code hl_function" href="thread_8h.html#ab19d108dadc16f5e2fd33f4512e87ccc">criaThread</a>(retorno);</div>
+<div class="line"><span class="lineno">  262</span>            quantThreads++;</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(operacao == 2){        <span class="comment">/* A thread (quantThread-1) solicita recurso */</span></div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>            recursoInt = (int)strtol(retorno, NULL, 10); <span class="comment">/* Identifica o recurso solicitado */</span></div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>            <span class="comment">/* Abaixo é alocado ao vetor de operações qual é o recurso solicitado e por qual thread está sendo feita*/</span></div>
+<div class="line"><span class="lineno">  269</span>            vetorOperacoes = <a class="code hl_function" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a>(vetorOperacoes, (recursoInt + 1), &amp;threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  270</span>            threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a02ca9918e129ba3c61e4b97b3b58e5f1">quantidadeLinhas</a>--;</div>
+<div class="line"><span class="lineno">  271</span>            vetorIdentacao = <a class="code hl_function" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a>(vetorIdentacao, identacao, &amp;threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>            free(retorno);</div>
+<div class="line"><span class="lineno">  274</span>            retorno = NULL;</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(operacao == 3){       <span class="comment">/* A thread (quantThread-1) libera recurso */</span></div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>            recursoInt = (int)strtol(retorno, NULL, 10); <span class="comment">/* Identifica o recurso liberado */</span></div>
+<div class="line"><span class="lineno">  279</span> </div>
+<div class="line"><span class="lineno">  280</span>            <span class="comment">/* Abaixo é alocado ao vetor de operações qual o recurso liberado e por qual thread */</span></div>
+<div class="line"><span class="lineno">  281</span>            vetorOperacoes = <a class="code hl_function" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a>(vetorOperacoes, -1*(recursoInt + 1), &amp;threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  282</span>            threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a02ca9918e129ba3c61e4b97b3b58e5f1">quantidadeLinhas</a>--;</div>
+<div class="line"><span class="lineno">  283</span>            vetorIdentacao = <a class="code hl_function" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a>(vetorIdentacao, identacao, &amp;threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>            free(retorno);</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>            retorno = NULL;</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(quantThreads == 0){     <span class="comment">/* primeira linha do arquivo, inicializando o vetor de disponíveis */</span></div>
+<div class="line"><span class="lineno">  290</span>            disponiveis = <a class="code hl_function" href="main_8c.html#af7ba232f6f27248e36639940a5e78b8d">preencheDisponivel</a>(linha, &amp;lenDisponiveis);</div>
+<div class="line"><span class="lineno">  291</span>        }</div>
+<div class="line"><span class="lineno">  292</span> </div>
+<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">if</span>(eof == -1){          <span class="comment">/* Para encerrar o laço */</span></div>
+<div class="line"><span class="lineno">  294</span>            threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a579493449eb1f854cd6e4ccd8cd99924">operacoes</a> = <a class="code hl_function" href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a>(threads[quantThreads-1]-&gt;operacoes, vetorOperacoes, 0, threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  295</span>            free(vetorOperacoes);</div>
+<div class="line"><span class="lineno">  296</span>            vetorOperacoes = NULL;</div>
+<div class="line"><span class="lineno">  297</span>            threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a0345f28d19e031eabf18b5d98a931fda">identacao</a> = <a class="code hl_function" href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a>(threads[quantThreads-1]-&gt;identacao, vetorIdentacao, 0, threads[quantThreads-1]-&gt;quantidadeLinhas);</div>
+<div class="line"><span class="lineno">  298</span>            free(vetorIdentacao);</div>
+<div class="line"><span class="lineno">  299</span>            vetorIdentacao = NULL;</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>            <span class="comment">/* Definindo a maior quantidade de linhas de uma thread */</span></div>
+<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">if</span>(threads[quantThreads-1]-&gt;quantidadeLinhas &gt; quantidadeMaximaLinhas)</div>
+<div class="line"><span class="lineno">  303</span>                quantidadeMaximaLinhas = threads[quantThreads-1]-&gt;<a class="code hl_variable" href="structthread.html#a02ca9918e129ba3c61e4b97b3b58e5f1">quantidadeLinhas</a>;</div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>        free(linha);</div>
+<div class="line"><span class="lineno">  307</span>        linha = NULL;</div>
+<div class="line"><span class="lineno">  308</span>    }<span class="keywordflow">while</span>(eof != -1);</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>    <span class="comment">/* É chamada a função para verificar se há possibilidade de deadlock. */</span></div>
+<div class="line"><span class="lineno">  311</span>    <a class="code hl_function" href="main_8c.html#ad8da4d3828848e346f5d8a378b44d9e6">testaDeadlock</a>(disponiveis, quantThreads, lenDisponiveis, quantidadeMaximaLinhas, threads);</div>
+<div class="line"><span class="lineno">  312</span> </div>
+<div class="line"><span class="lineno">  313</span>    <span class="comment">/* Desalocando memória */</span></div>
+<div class="line"><span class="lineno">  314</span>     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; quantThreads; i++)</div>
+<div class="line"><span class="lineno">  315</span>        <a class="code hl_function" href="thread_8h.html#adbb8bab4d03cbaff3e2a847ae2da2450">desalocaThread</a>(threads[i]);</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>    free(threads);</div>
+<div class="line"><span class="lineno">  318</span>    free(disponiveis);</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  321</span>}</div>
+<div class="ttc" id="amain_8c_html_a7de90cfbdf9fc4bf9565f0b655d930ba"><div class="ttname"><a href="main_8c.html#a7de90cfbdf9fc4bf9565f0b655d930ba">verificaOperacao</a></div><div class="ttdeci">char * verificaOperacao(char *linha, int *operacao)</div><div class="ttdef"><b>Definition:</b> main.c:36</div></div>
+<div class="ttc" id="amain_8c_html_ad8da4d3828848e346f5d8a378b44d9e6"><div class="ttname"><a href="main_8c.html#ad8da4d3828848e346f5d8a378b44d9e6">testaDeadlock</a></div><div class="ttdeci">void testaDeadlock(int *disponiveis, int quantThread, int lenDisponiveis, int maximoLinhas, Thread **threads)</div><div class="ttdef"><b>Definition:</b> main.c:162</div></div>
+<div class="ttc" id="amain_8c_html_af7ba232f6f27248e36639940a5e78b8d"><div class="ttname"><a href="main_8c.html#af7ba232f6f27248e36639940a5e78b8d">preencheDisponivel</a></div><div class="ttdeci">int * preencheDisponivel(char *linha, int *lenDisponivel)</div><div class="ttdef"><b>Definition:</b> main.c:67</div></div>
+<div class="ttc" id="astring_8h_html_aaac0aa388d02ee09309f51247c8134f9"><div class="ttname"><a href="string_8h.html#aaac0aa388d02ee09309f51247c8134f9">leLinha</a></div><div class="ttdeci">char * leLinha(int *identacao, int *eof)</div><div class="ttdoc">Lê uma linha e retorna em formato de string. eof == -1 significa o fim do arquivo.</div></div>
+<div class="ttc" id="athread_8h_html_ab19d108dadc16f5e2fd33f4512e87ccc"><div class="ttname"><a href="thread_8h.html#ab19d108dadc16f5e2fd33f4512e87ccc">criaThread</a></div><div class="ttdeci">Thread * criaThread(char *nome)</div><div class="ttdoc">Aloca uma nova estrutura do tipo Thread e inicializa as variáveis.</div></div>
+<div class="ttc" id="athread_8h_html_adbb8bab4d03cbaff3e2a847ae2da2450"><div class="ttname"><a href="thread_8h.html#adbb8bab4d03cbaff3e2a847ae2da2450">desalocaThread</a></div><div class="ttdeci">void desalocaThread(Thread *thread)</div><div class="ttdoc">Libera a memória alocada na estrutura Thread passada como parâmetro.</div></div>
+<div class="ttc" id="avector_8h_html_a2ba08d54f803b8d807f6c684ce2f1c34"><div class="ttname"><a href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a></div><div class="ttdeci">int ** expandirMatriz(int **m, int *vetor, int posicaoInsercao, int lenVet)</div><div class="ttdoc">Realoca a matriz passada como parâmetro adicionando ao final da mesma um vetor passado como parâmetro...</div></div>
+<div class="ttc" id="avector_8h_html_aeb01699d6370ab4cc4ba20ae5b427e18"><div class="ttname"><a href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a></div><div class="ttdeci">int * expandirVetor(int *v, int valor, int *lenVet)</div><div class="ttdoc">Realoca o vetor passado como parâmetro adicionando o inteiro ao final do mesmo.</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af7ba232f6f27248e36639940a5e78b8d" name="af7ba232f6f27248e36639940a5e78b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ba232f6f27248e36639940a5e78b8d">&#9670;&nbsp;</a></span>preencheDisponivel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * preencheDisponivel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>linha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>lenDisponivel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Essa função é responsável por preencher o vetor de disponíveis. A primeira linha do arquivo representa a quantiade de recursos disponíveis, essa função recebe a leitura da linha e aloca em um vetor a quantidade de recursos que são especificados. </p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                        {</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordtype">char</span> *numero = NULL;</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordtype">int</span> contador = 0, *disponivel = NULL, lenNumero = 0; <span class="comment">/*Contador armazena a quantidade de recursos diferentes*/</span></div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    *lenDisponivel = 0;</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">while</span>(1){</div>
+<div class="line"><span class="lineno">   73</span>        numero = realloc(numero, (lenNumero + 1) * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span>(linha[contador] != <span class="charliteral">&#39; &#39;</span> &amp;&amp; linha[contador] != <span class="charliteral">&#39;\0&#39;</span>){</div>
+<div class="line"><span class="lineno">   76</span>            numero[lenNumero] = linha[contador];</div>
+<div class="line"><span class="lineno">   77</span>            lenNumero++;</div>
+<div class="line"><span class="lineno">   78</span>        }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   79</span>            numero[lenNumero] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   80</span>            disponivel = <a class="code hl_function" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a>(disponivel, strtol(numero, NULL, 10), lenDisponivel);</div>
+<div class="line"><span class="lineno">   81</span>            free(numero);</div>
+<div class="line"><span class="lineno">   82</span>            numero = NULL;</div>
+<div class="line"><span class="lineno">   83</span>            lenNumero = 0;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span>(linha[contador] == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        contador++;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> disponivel; <span class="comment">/* Retorna o vetor alocado com os recursos disponíveis */</span></div>
+<div class="line"><span class="lineno">   92</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad8da4d3828848e346f5d8a378b44d9e6" name="ad8da4d3828848e346f5d8a378b44d9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8da4d3828848e346f5d8a378b44d9e6">&#9670;&nbsp;</a></span>testaDeadlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testaDeadlock </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>disponiveis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>quantThread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lenDisponiveis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maximoLinhas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="thread_8h.html#a0cadebd7be5c021d014225d714ed2556">Thread</a> **&#160;</td>
+          <td class="paramname"><em>threads</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Função responsável por identificar o momento do deadlock, se ocorrer, e quais processos participaram para tal. </p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordtype">int</span> vetorPermutacao[quantThread], *linhaExecucao = NULL, *vetorNulo = calloc(quantThread, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)), deadlock = 0, executou = 1;</div>
+<div class="line"><span class="lineno">  164</span>    <a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *m = NULL;</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; quantThread; i++)</div>
+<div class="line"><span class="lineno">  167</span>        vetorPermutacao[i] = 1;</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>    vetorPermutacao[quantThread-1] = 0;  <span class="comment">/* Vetor responsável por gerar todas as permutações na</span></div>
+<div class="line"><span class="lineno">  170</span><span class="comment">                                            matriz de modo a verificar todas as possibilidades possíveis */</span></div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">while</span>(<a class="code hl_function" href="vector_8h.html#a41609381ce6fad70e0058369257540f6">menorQueConstante</a>(vetorPermutacao, quantThread, maximoLinhas) &amp;&amp; !deadlock){</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span>(m)</div>
+<div class="line"><span class="lineno">  175</span>            <a class="code hl_function" href="multiplas_instancias_8c.html#a9bdf1f3bd94a7ed7736146ef31be2005">desalocaMultiplasInstancias</a>(m); <span class="comment">/* Libera o vetor m de multiplas instancias */</span></div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>        m = <a class="code hl_function" href="multiplas_instancias_8c.html#a009ee23df9fc93d2d6ef72f7f9257031">incializaMultiplasInstancias</a>(disponiveis, lenDisponiveis); <span class="comment">/*Inicializa o vetor de multiplas instancias */</span></div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; quantThread; i++)</div>
+<div class="line"><span class="lineno">  180</span>            m = <a class="code hl_function" href="multiplas_instancias_8c.html#ae45fc12d3e35f7f0e9f7efff21800d07">inserirProcesso</a>(m);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_function" href="vector_8h.html#a774b353d283bebe11ccb6394baa620c3">incrementaVetor</a>(vetorPermutacao, quantThread, maximoLinhas); <span class="comment">/* Incrementa o vetor em 1 unidade */</span></div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span>(linhaExecucao){         <span class="comment">/*Zera o vetor de linha de execução */</span></div>
+<div class="line"><span class="lineno">  185</span>            free(linhaExecucao);</div>
+<div class="line"><span class="lineno">  186</span>            linhaExecucao = NULL;</div>
+<div class="line"><span class="lineno">  187</span>        }</div>
+<div class="line"><span class="lineno">  188</span>        linhaExecucao = <a class="code hl_function" href="vector_8h.html#acef2d840b128f000f65005c34239621b">copiaVetor</a>(vetorNulo, quantThread);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">while</span>(!deadlock){</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; quantThread; i++){ <span class="comment">/*Executa as intruções de todas as threadas*/</span></div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; vetorPermutacao[i]; j++){</div>
+<div class="line"><span class="lineno">  195</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="vector_8h.html#a41609381ce6fad70e0058369257540f6">menorQueConstante</a>(linhaExecucao, quantThread, maximoLinhas)) <span class="comment">/* Acabou a execução */</span></div>
+<div class="line"><span class="lineno">  196</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>                    m = <a class="code hl_function" href="main_8c.html#a96fc845e4761b71d8535e29bf4b23f1d">executaOperacao</a>(m, linhaExecucao[i], i, threads[i], &amp;deadlock, &amp;executou);</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>                    <span class="keywordflow">if</span>(executou == 1)</div>
+<div class="line"><span class="lineno">  201</span>                        linhaExecucao[i]++;</div>
+<div class="line"><span class="lineno">  202</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  203</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>                    <span class="keywordflow">if</span>(deadlock){</div>
+<div class="line"><span class="lineno">  206</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  207</span>                    }</div>
+<div class="line"><span class="lineno">  208</span>                }</div>
+<div class="line"><span class="lineno">  209</span>                contador++;</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>                <span class="keywordflow">if</span>(deadlock)</div>
+<div class="line"><span class="lineno">  212</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  213</span>            }</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="vector_8h.html#a41609381ce6fad70e0058369257540f6">menorQueConstante</a>(linhaExecucao, quantThread, maximoLinhas)) <span class="comment">/* Acabou a execução */</span></div>
+<div class="line"><span class="lineno">  215</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>    }</div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">if</span>(deadlock){</div>
+<div class="line"><span class="lineno">  219</span>        <a class="code hl_function" href="main_8c.html#a8a6233ed1d6c18051a718dc2f2ad2d3d">geraSaida</a>(threads, vetorPermutacao, linhaExecucao, quantThread); <span class="comment">/* Imprime a saída como solicitado*/</span></div>
+<div class="line"><span class="lineno">  220</span>    }<span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  221</span>        printf(<span class="stringliteral">&quot;programa livre de impasses.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span>(linhaExecucao)</div>
+<div class="line"><span class="lineno">  224</span>        free(linhaExecucao);</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    <a class="code hl_function" href="multiplas_instancias_8c.html#a9bdf1f3bd94a7ed7736146ef31be2005">desalocaMultiplasInstancias</a>(m);</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>    free(vetorNulo);</div>
+<div class="line"><span class="lineno">  229</span>}</div>
+<div class="ttc" id="amain_8c_html_a8a6233ed1d6c18051a718dc2f2ad2d3d"><div class="ttname"><a href="main_8c.html#a8a6233ed1d6c18051a718dc2f2ad2d3d">geraSaida</a></div><div class="ttdeci">void geraSaida(Thread **threads, int *vetorPermutacao, int *linhaExecucao, int quantThreads)</div><div class="ttdef"><b>Definition:</b> main.c:128</div></div>
+<div class="ttc" id="amain_8c_html_a96fc845e4761b71d8535e29bf4b23f1d"><div class="ttname"><a href="main_8c.html#a96fc845e4761b71d8535e29bf4b23f1d">executaOperacao</a></div><div class="ttdeci">MultiplasInstancias * executaOperacao(MultiplasInstancias *m, int linhaExecucao, int processo, Thread *thread, int *deadlock, int *executou)</div><div class="ttdef"><b>Definition:</b> main.c:100</div></div>
+<div class="ttc" id="amultiplas_instancias_8c_html_a009ee23df9fc93d2d6ef72f7f9257031"><div class="ttname"><a href="multiplas_instancias_8c.html#a009ee23df9fc93d2d6ef72f7f9257031">incializaMultiplasInstancias</a></div><div class="ttdeci">MultiplasInstancias * incializaMultiplasInstancias(int *disponivel, int lenDisponivel)</div><div class="ttdoc">Função que aloca e inicializa a estrutura de MultiplasInstancias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:6</div></div>
+<div class="ttc" id="amultiplas_instancias_8c_html_a9bdf1f3bd94a7ed7736146ef31be2005"><div class="ttname"><a href="multiplas_instancias_8c.html#a9bdf1f3bd94a7ed7736146ef31be2005">desalocaMultiplasInstancias</a></div><div class="ttdeci">void desalocaMultiplasInstancias(MultiplasInstancias *m)</div><div class="ttdoc">Função para liberar a memória da estrutura MultiplasInstancias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:126</div></div>
+<div class="ttc" id="amultiplas_instancias_8c_html_ae45fc12d3e35f7f0e9f7efff21800d07"><div class="ttname"><a href="multiplas_instancias_8c.html#ae45fc12d3e35f7f0e9f7efff21800d07">inserirProcesso</a></div><div class="ttdeci">MultiplasInstancias * inserirProcesso(MultiplasInstancias *m)</div><div class="ttdoc">Função para inserir um novo processo na estrutura MultiplasIntancias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:69</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html"><div class="ttname"><a href="structmultiplas_instancias.html">multiplasInstancias</a></div><div class="ttdoc">Tipo abstrato de dados para gerenciar as estruturas do algoritmo de multiplas instâncias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:7</div></div>
+<div class="ttc" id="avector_8h_html_a41609381ce6fad70e0058369257540f6"><div class="ttname"><a href="vector_8h.html#a41609381ce6fad70e0058369257540f6">menorQueConstante</a></div><div class="ttdeci">int menorQueConstante(int *v, int lenV, int constante)</div><div class="ttdoc">Retorna 1 se algum valor de v for menor que a constante.</div></div>
+<div class="ttc" id="avector_8h_html_a774b353d283bebe11ccb6394baa620c3"><div class="ttname"><a href="vector_8h.html#a774b353d283bebe11ccb6394baa620c3">incrementaVetor</a></div><div class="ttdeci">void incrementaVetor(int *vetor, int len, int max)</div><div class="ttdoc">Função auxiliar que realiza o incremento de cada posição do vetor até o max.</div></div>
+<div class="ttc" id="avector_8h_html_acef2d840b128f000f65005c34239621b"><div class="ttname"><a href="vector_8h.html#acef2d840b128f000f65005c34239621b">copiaVetor</a></div><div class="ttdeci">int * copiaVetor(int *vet, int len)</div><div class="ttdoc">Cria e retorna um ponteiro para cópia do vetor passado como parâmetro.</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7de90cfbdf9fc4bf9565f0b655d930ba" name="a7de90cfbdf9fc4bf9565f0b655d930ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de90cfbdf9fc4bf9565f0b655d930ba">&#9670;&nbsp;</a></span>verificaOperacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * verificaOperacao </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>linha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>operacao</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Essa função é responsável por verificar as operações nas linhas e classificá-las em: 1 = Cria thread nova; 2 = Solicitar recurso; 3 = Liberar recurso; -1 = OperacaoInvalida. </p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                  {</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">char</span> *retorno = NULL;</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    retorno = <a class="code hl_function" href="string_8h.html#a0d6416189a3cc04d975cea1b76f4fcd2">estaContida</a>(<a class="code hl_define" href="main_8c.html#a993dd874d7b3865c6efedd936a90845e">stringInicioThread</a>, linha);</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">if</span>(retorno){</div>
+<div class="line"><span class="lineno">   41</span>        *operacao = 1;  <span class="comment">/* A operação é de criar thread */</span></div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> retorno;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    retorno = <a class="code hl_function" href="string_8h.html#a0d6416189a3cc04d975cea1b76f4fcd2">estaContida</a>(<a class="code hl_define" href="main_8c.html#a5c6d276174f8d4a84f2a130ca610cfa2">stringSolicitaRecurso</a>, linha);</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span>(retorno){</div>
+<div class="line"><span class="lineno">   47</span>        *operacao = 2; <span class="comment">/* A operação é de solicitação de recurso */</span></div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> retorno;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    retorno = <a class="code hl_function" href="string_8h.html#a0d6416189a3cc04d975cea1b76f4fcd2">estaContida</a>(<a class="code hl_define" href="main_8c.html#aae074cf68315e901e6d37ae6709906b0">stringLiberaRecurso</a>, linha);</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">if</span>(retorno){</div>
+<div class="line"><span class="lineno">   53</span>        *operacao = 3; <span class="comment">/* A operação é de liberação de recurso */</span></div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> retorno;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    *operacao = -1;   <span class="comment">/* A operação é inválida */</span></div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> retorno;</div>
+<div class="line"><span class="lineno">   59</span>}</div>
+<div class="ttc" id="amain_8c_html_a5c6d276174f8d4a84f2a130ca610cfa2"><div class="ttname"><a href="main_8c.html#a5c6d276174f8d4a84f2a130ca610cfa2">stringSolicitaRecurso</a></div><div class="ttdeci">#define stringSolicitaRecurso</div><div class="ttdef"><b>Definition:</b> main.c:24</div></div>
+<div class="ttc" id="amain_8c_html_a993dd874d7b3865c6efedd936a90845e"><div class="ttname"><a href="main_8c.html#a993dd874d7b3865c6efedd936a90845e">stringInicioThread</a></div><div class="ttdeci">#define stringInicioThread</div><div class="ttdef"><b>Definition:</b> main.c:23</div></div>
+<div class="ttc" id="amain_8c_html_aae074cf68315e901e6d37ae6709906b0"><div class="ttname"><a href="main_8c.html#aae074cf68315e901e6d37ae6709906b0">stringLiberaRecurso</a></div><div class="ttdeci">#define stringLiberaRecurso</div><div class="ttdef"><b>Definition:</b> main.c:25</div></div>
+<div class="ttc" id="astring_8h_html_a0d6416189a3cc04d975cea1b76f4fcd2"><div class="ttname"><a href="string_8h.html#a0d6416189a3cc04d975cea1b76f4fcd2">estaContida</a></div><div class="ttdeci">char * estaContida(char *string1, char *string2)</div><div class="ttdoc">Verifica se a string1 está contida na string2. Caso esteja, retorna a string2 sem a string 1....</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

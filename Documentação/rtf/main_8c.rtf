@@ -1,0 +1,564 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\comment begin body}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referência do Arquivo Sistemas Operacionais/Detector de deadlock/main.c\par \pard\plain 
+{\tc\tcl2 \v Sistemas Operacionais/Detector de deadlock/main.c}
+{\xe \v Sistemas Operacionais/Detector de deadlock/main.c}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdio.h>}\par
+{\f2 #include <stdlib.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "vector.h"}\par
+{\f2 #include "thread.h"}\par
+{\f2 #include "multiplasInstancias.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Definições e Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b stringInicioThread}\~ "thread \\0"       /*< Parte da string de criação de uma {\b thread}*/\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b stringSolicitaRecurso}\~ "p \\0"         /*< Parte da string de solicitação de recurso */\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b stringLiberaRecurso}\~ "v \\0"           /*< Parte da string de liberação de recurso */\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funções\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b verificaOperacao} (char *linha, int *operacao)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int * {\b preencheDisponivel} (char *linha, int *lenDisponivel)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b MultiplasInstancias} * {\b executaOperacao} ({\b MultiplasInstancias} *m, int linhaExecucao, int processo, {\b Thread} *{\b thread}, int *deadlock, int *executou)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b geraSaida} ({\b Thread} **threads, int *vetorPermutacao, int *linhaExecucao, int quantThreads)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b testaDeadlock} (int *disponiveis, int quantThread, int lenDisponiveis, int maximoLinhas, {\b Thread} **threads)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descrição detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Autor\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Ailton José Brandão Junior \par
+Pedro Antônio Ferreira Sant' Ana \par
+Jothan Rodrigues de Almeida \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Versão\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+0.1 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Data\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+2022-08-12\par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Copyright\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Copyright (c) 2022 \par
+}}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Definições e macros\par
+\pard\plain 
+{\xe \v stringInicioThread\:main.c}
+{\xe \v main.c\:stringInicioThread}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define stringInicioThread\~ "thread \\0"       /*< Parte da string de criação de uma {\b thread}*/}}
+\par
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v stringLiberaRecurso\:main.c}
+{\xe \v main.c\:stringLiberaRecurso}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define stringLiberaRecurso\~ "v \\0"           /*< Parte da string de liberação de recurso */}}
+\par
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v stringSolicitaRecurso\:main.c}
+{\xe \v main.c\:stringSolicitaRecurso}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define stringSolicitaRecurso\~ "p \\0"         /*< Parte da string de solicitação de recurso */}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funções\par
+\pard\plain 
+{\xe \v executaOperacao\:main.c}
+{\xe \v main.c\:executaOperacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b MultiplasInstancias} * executaOperacao ({\b MultiplasInstancias} *  {\i m}, int  {\i linhaExecucao}, int  {\i processo}, {\b Thread} *  {\i thread}, int *  {\i deadlock}, int *  {\i executou})}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Função responsável por executar as operações realizadas por cada thread. Em caso de números superiores a zero (positivos), representam a solicitação de um recurso. Caso contrário (negativos), representam a liberação de um recurso. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 100                                                                                                                                            \{\par
+101     {\cf19 if}(linhaExecucao >= thread->quantidadeLinhas)\par
+102         {\cf19 return} m;\par
+103 \par
+104     {\cf19 if}(thread->operacoes[0][linhaExecucao] > 0)\{ {\cf20 /* A thread está solicitando recurso */}\par
+105 \par
+106         {\cf18 int} solicitacao[m->quantRecursos];\par
+107 \par
+108         {\cf19 for}({\cf18 int} i = 0; i < m->quantRecursos; i++)\par
+109             solicitacao[i] = 0;\par
+110 \par
+111         solicitacao[thread->operacoes[0][linhaExecucao] - 1] = 1;\par
+112 \par
+113         {\cf19 return} solicitaRecurso(m, processo, solicitacao, deadlock, executou);\par
+114     \}\par
+115     {\cf19 else}   {\cf20 /*A thread está liberando recurso*/}\par
+116     \{\par
+117         *executou = 1;\par
+118         {\cf19 return} desalocaRecurso(m, processo, -1*(thread->operacoes[0][linhaExecucao] + 1));\par
+119     \}\par
+120 \}\par
+}
+}
+{\xe \v geraSaida\:main.c}
+{\xe \v main.c\:geraSaida}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void geraSaida ({\b Thread} **  {\i threads}, int *  {\i vetorPermutacao}, int *  {\i linhaExecucao}, int  {\i quantThreads})}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Em caso de deadlock, esta função é responsável por imprimir a saída como requerida. Imprime cada passo, por sua vez, com o nome de uma thread e o comando que ela executou (incluindo todos os caracteres de tabulação que o precederem em sua linha), separados por um caracter dois pontos (“:”). \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 128                                                                                             \{\par
+129     {\cf18 int} *vetorAux = calloc(quantThreads, {\cf17 sizeof}({\cf18 int})); {\cf20 /* Vetor responsável por garantir a impressão de somente os processos}\par
+130 {\cf20                                                           que ocasionaram o deadlock */}\par
+131 \par
+132     {\cf19 while}(!igual(vetorAux, linhaExecucao, quantThreads))\{\par
+133         {\cf19 for}({\cf18 int} i = 0; i < quantThreads; i++)\{\par
+134 \par
+135             {\cf19 if}(vetorAux[i] < linhaExecucao[i])\{\par
+136                 {\cf19 for}({\cf18 int} j = 0; j < vetorPermutacao[i]; j++)\{\par
+137 \par
+138                     printf({\cf22 "%s:"}, threads[i]->nome); {\cf20 /*Imprime o nome da thread*/}\par
+139 \par
+140                     {\cf19 for}({\cf18 int} l = 0; l < threads[i]->identacao[0][vetorAux[i]]; l++)\par
+141                         printf({\cf22 "\\t"});                                               {\cf20 /*Identação*/}\par
+142 \par
+143                     {\cf19 if}(threads[i]->operacoes[0][vetorAux[i]] > 0)\par
+144                         printf({\cf22 "p %i\\n"}, threads[i]->operacoes[0][vetorAux[i]] - 1); {\cf20 /* Imprime quando a operação é de solicitação */}\par
+145                     {\cf19 else}\par
+146                         printf({\cf22 "v %i\\n"}, (-1*threads[i]->operacoes[0][vetorAux[i]]) - 1); {\cf20 /* Imprime quando a operação é de liberação */}\par
+147 \par
+148                     vetorAux[i]++;\par
+149 \par
+150                     {\cf19 if}(vetorAux[i] == linhaExecucao[i])\par
+151                         {\cf19 break};\par
+152                 \}\par
+153             \}\par
+154         \}\par
+155     \}\par
+156     free(vetorAux);\par
+157 \}\par
+}
+}
+{\xe \v main\:main.c}
+{\xe \v main.c\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int main ()}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 231           \{\par
+232 \par
+233     {\cf20 /* Declaração das variávies */}\par
+234     {\cf18 char} *linha = NULL, *retorno = NULL;\par
+235     {\cf18 int} quantThreads = 0, quantidadeMaximaLinhas = 0, operacao = 0, *disponiveis = NULL, lenDisponiveis = 0\par
+236     ,*vetorOperacoes = NULL, identacao = 0, recursoInt = 0, eof = 0, *vetorIdentacao = NULL;\par
+237     Thread **threads = NULL;\par
+238 \par
+239     {\cf19 do}\{\par
+240         identacao = 0;\par
+241         linha = leLinha(&identacao, &eof);\par
+242 \par
+243         retorno = verificaOperacao(linha, &operacao); {\cf20 /* verificando qual operação foi solicitada */}\par
+244         {\cf19 if}(operacao == 1)\{                            {\cf20 /* Inicialização de nova thread */}\par
+245             {\cf19 if}(quantThreads > 0)\{\par
+246                 threads[quantThreads-1]->operacoes = expandirMatriz(threads[quantThreads-1]->operacoes, vetorOperacoes, 0, threads[quantThreads-1]->quantidadeLinhas);\par
+247                 free(vetorOperacoes);\par
+248                 vetorOperacoes = NULL;\par
+249 \par
+250                 threads[quantThreads-1]->identacao = expandirMatriz(threads[quantThreads-1]->identacao, vetorIdentacao, 0, threads[quantThreads-1]->quantidadeLinhas);\par
+251                 free(vetorIdentacao);\par
+252                 vetorIdentacao = NULL;\par
+253 \par
+254                 {\cf20 /* Definindo a maior quantidade de linhas de uma thread */}\par
+255                 {\cf19 if}(threads[quantThreads-1]->quantidadeLinhas > quantidadeMaximaLinhas)\par
+256                     quantidadeMaximaLinhas = threads[quantThreads-1]->quantidadeLinhas;\par
+257             \}\par
+258 \par
+259             {\cf20 /* Inicializando as variáveis da nova thread */}\par
+260             threads = realloc(threads, (quantThreads + 1) * {\cf17 sizeof}(Thread*));\par
+261             threads[quantThreads] = criaThread(retorno);\par
+262             quantThreads++;\par
+263 \par
+264         \}{\cf19 else} {\cf19 if}(operacao == 2)\{        {\cf20 /* A thread (quantThread-1) solicita recurso */}\par
+265 \par
+266             recursoInt = (int)strtol(retorno, NULL, 10); {\cf20 /* Identifica o recurso solicitado */}\par
+267 \par
+268             {\cf20 /* Abaixo é alocado ao vetor de operações qual é o recurso solicitado e por qual thread está sendo feita*/}\par
+269             vetorOperacoes = expandirVetor(vetorOperacoes, (recursoInt + 1), &threads[quantThreads-1]->quantidadeLinhas);\par
+270             threads[quantThreads-1]->quantidadeLinhas--;\par
+271             vetorIdentacao = expandirVetor(vetorIdentacao, identacao, &threads[quantThreads-1]->quantidadeLinhas);\par
+272 \par
+273             free(retorno);\par
+274             retorno = NULL;\par
+275 \par
+276         \}{\cf19 else} {\cf19 if}(operacao == 3)\{       {\cf20 /* A thread (quantThread-1) libera recurso */}\par
+277 \par
+278             recursoInt = (int)strtol(retorno, NULL, 10); {\cf20 /* Identifica o recurso liberado */}\par
+279 \par
+280             {\cf20 /* Abaixo é alocado ao vetor de operações qual o recurso liberado e por qual thread */}\par
+281             vetorOperacoes = expandirVetor(vetorOperacoes, -1*(recursoInt + 1), &threads[quantThreads-1]->quantidadeLinhas);\par
+282             threads[quantThreads-1]->quantidadeLinhas--;\par
+283             vetorIdentacao = expandirVetor(vetorIdentacao, identacao, &threads[quantThreads-1]->quantidadeLinhas);\par
+284 \par
+285             free(retorno);\par
+286 \par
+287             retorno = NULL;\par
+288 \par
+289         \}{\cf19 else} {\cf19 if}(quantThreads == 0)\{     {\cf20 /* primeira linha do arquivo, inicializando o vetor de disponíveis */}\par
+290             disponiveis = preencheDisponivel(linha, &lenDisponiveis);\par
+291         \}\par
+292 \par
+293         {\cf19 if}(eof == -1)\{          {\cf20 /* Para encerrar o laço */}\par
+294             threads[quantThreads-1]->operacoes = expandirMatriz(threads[quantThreads-1]->operacoes, vetorOperacoes, 0, threads[quantThreads-1]->quantidadeLinhas);\par
+295             free(vetorOperacoes);\par
+296             vetorOperacoes = NULL;\par
+297             threads[quantThreads-1]->identacao = expandirMatriz(threads[quantThreads-1]->identacao, vetorIdentacao, 0, threads[quantThreads-1]->quantidadeLinhas);\par
+298             free(vetorIdentacao);\par
+299             vetorIdentacao = NULL;\par
+300 \par
+301             {\cf20 /* Definindo a maior quantidade de linhas de uma thread */}\par
+302             {\cf19 if}(threads[quantThreads-1]->quantidadeLinhas > quantidadeMaximaLinhas)\par
+303                 quantidadeMaximaLinhas = threads[quantThreads-1]->quantidadeLinhas;\par
+304         \}\par
+305 \par
+306         free(linha);\par
+307         linha = NULL;\par
+308     \}{\cf19 while}(eof != -1);\par
+309 \par
+310     {\cf20 /* É chamada a função para verificar se há possibilidade de deadlock. */}\par
+311     testaDeadlock(disponiveis, quantThreads, lenDisponiveis, quantidadeMaximaLinhas, threads);\par
+312 \par
+313     {\cf20 /* Desalocando memória */}\par
+314      {\cf19 for}({\cf18 int} i = 0; i < quantThreads; i++)\par
+315         desalocaThread(threads[i]);\par
+316 \par
+317     free(threads);\par
+318     free(disponiveis);\par
+319 \par
+320     {\cf19 return} 0;\par
+321 \}\par
+}
+}
+{\xe \v preencheDisponivel\:main.c}
+{\xe \v main.c\:preencheDisponivel}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int * preencheDisponivel (char *  {\i linha}, int *  {\i lenDisponivel})}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Essa função é responsável por preencher o vetor de disponíveis. A primeira linha do arquivo representa a quantiade de recursos disponíveis, essa função recebe a leitura da linha e aloca em um vetor a quantidade de recursos que são especificados. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 67                                                         \{\par
+68     {\cf18 char} *numero = NULL;\par
+69     {\cf18 int} contador = 0, *disponivel = NULL, lenNumero = 0; {\cf20 /*Contador armazena a quantidade de recursos diferentes*/}\par
+70 \par
+71     *lenDisponivel = 0;\par
+72     {\cf19 while}(1)\{\par
+73         numero = realloc(numero, (lenNumero + 1) * {\cf17 sizeof}({\cf18 char}));\par
+74 \par
+75         {\cf19 if}(linha[contador] != {\cf23 ' '} && linha[contador] != {\cf23 '\\0'})\{\par
+76             numero[lenNumero] = linha[contador];\par
+77             lenNumero++;\par
+78         \}{\cf19 else}\{\par
+79             numero[lenNumero] = {\cf23 '\\0'};\par
+80             disponivel = expandirVetor(disponivel, strtol(numero, NULL, 10), lenDisponivel);\par
+81             free(numero);\par
+82             numero = NULL;\par
+83             lenNumero = 0;\par
+84 \par
+85             {\cf19 if}(linha[contador] == {\cf23 '\\0'})\par
+86                 {\cf19 break};\par
+87         \}\par
+88         contador++;\par
+89     \}\par
+90 \par
+91     {\cf19 return} disponivel; {\cf20 /* Retorna o vetor alocado com os recursos disponíveis */}\par
+92 \}\par
+}
+}
+{\xe \v testaDeadlock\:main.c}
+{\xe \v main.c\:testaDeadlock}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void testaDeadlock (int *  {\i disponiveis}, int  {\i quantThread}, int  {\i lenDisponiveis}, int  {\i maximoLinhas}, {\b Thread} **  {\i threads})}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Função responsável por identificar o momento do deadlock, se ocorrer, e quais processos participaram para tal. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 162                                                                                                              \{\par
+163     {\cf18 int} vetorPermutacao[quantThread], *linhaExecucao = NULL, *vetorNulo = calloc(quantThread, {\cf17 sizeof}({\cf18 int})), deadlock = 0, executou = 1;\par
+164     MultiplasInstancias *m = NULL;\par
+165 \par
+166     {\cf19 for}({\cf18 int} i = 0; i < quantThread; i++)\par
+167         vetorPermutacao[i] = 1;\par
+168 \par
+169     vetorPermutacao[quantThread-1] = 0;  {\cf20 /* Vetor responsável por gerar todas as permutações na}\par
+170 {\cf20                                             matriz de modo a verificar todas as possibilidades possíveis */}\par
+171 \par
+172     {\cf19 while}(menorQueConstante(vetorPermutacao, quantThread, maximoLinhas) && !deadlock)\{\par
+173 \par
+174         {\cf19 if}(m)\par
+175             desalocaMultiplasInstancias(m); {\cf20 /* Libera o vetor m de multiplas instancias */}\par
+176 \par
+177         m = incializaMultiplasInstancias(disponiveis, lenDisponiveis); {\cf20 /*Inicializa o vetor de multiplas instancias */}\par
+178 \par
+179         {\cf19 for}({\cf18 int} i = 0; i < quantThread; i++)\par
+180             m = inserirProcesso(m);\par
+181 \par
+182         incrementaVetor(vetorPermutacao, quantThread, maximoLinhas); {\cf20 /* Incrementa o vetor em 1 unidade */}\par
+183 \par
+184         {\cf19 if}(linhaExecucao)\{         {\cf20 /*Zera o vetor de linha de execução */}\par
+185             free(linhaExecucao);\par
+186             linhaExecucao = NULL;\par
+187         \}\par
+188         linhaExecucao = copiaVetor(vetorNulo, quantThread);\par
+189 \par
+190         {\cf18 int} contador = 0;\par
+191         {\cf19 while}(!deadlock)\{\par
+192             {\cf19 for}({\cf18 int} i = 0; i < quantThread; i++)\{ {\cf20 /*Executa as intruções de todas as threadas*/}\par
+193 \par
+194                 {\cf19 for}({\cf18 int} j = 0; j < vetorPermutacao[i]; j++)\{\par
+195                     {\cf19 if}(!menorQueConstante(linhaExecucao, quantThread, maximoLinhas)) {\cf20 /* Acabou a execução */}\par
+196                         {\cf19 break};\par
+197 \par
+198                     m = executaOperacao(m, linhaExecucao[i], i, threads[i], &deadlock, &executou);\par
+199 \par
+200                     {\cf19 if}(executou == 1)\par
+201                         linhaExecucao[i]++;\par
+202                     {\cf19 else}\par
+203                         {\cf19 break};\par
+204 \par
+205                     {\cf19 if}(deadlock)\{\par
+206                         {\cf19 break};\par
+207                     \}\par
+208                 \}\par
+209                 contador++;\par
+210 \par
+211                 {\cf19 if}(deadlock)\par
+212                     {\cf19 break};\par
+213             \}\par
+214             {\cf19 if}(!menorQueConstante(linhaExecucao, quantThread, maximoLinhas)) {\cf20 /* Acabou a execução */}\par
+215                 {\cf19 break};\par
+216         \}\par
+217     \}\par
+218     {\cf19 if}(deadlock)\{\par
+219         geraSaida(threads, vetorPermutacao, linhaExecucao, quantThread); {\cf20 /* Imprime a saída como solicitado*/}\par
+220     \}{\cf19 else}\par
+221         printf({\cf22 "programa livre de impasses.\\n"});\par
+222 \par
+223     {\cf19 if}(linhaExecucao)\par
+224         free(linhaExecucao);\par
+225 \par
+226     desalocaMultiplasInstancias(m);\par
+227 \par
+228     free(vetorNulo);\par
+229 \}\par
+}
+}
+{\xe \v verificaOperacao\:main.c}
+{\xe \v main.c\:verificaOperacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char * verificaOperacao (char *  {\i linha}, int *  {\i operacao})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Essa função é responsável por verificar as operações nas linhas e classificá-las em: 1 = Cria thread nova; 2 = Solicitar recurso; 3 = Liberar recurso; -1 = OperacaoInvalida. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 36                                                   \{\par
+37     {\cf18 char} *retorno = NULL;\par
+38 \par
+39     retorno = estaContida(stringInicioThread, linha);\par
+40     {\cf19 if}(retorno)\{\par
+41         *operacao = 1;  {\cf20 /* A operação é de criar thread */}\par
+42         {\cf19 return} retorno;\par
+43     \}\par
+44 \par
+45     retorno = estaContida(stringSolicitaRecurso, linha);\par
+46     {\cf19 if}(retorno)\{\par
+47         *operacao = 2; {\cf20 /* A operação é de solicitação de recurso */}\par
+48         {\cf19 return} retorno;\par
+49     \}\par
+50 \par
+51     retorno = estaContida(stringLiberaRecurso, linha);\par
+52     {\cf19 if}(retorno)\{\par
+53         *operacao = 3; {\cf20 /* A operação é de liberação de recurso */}\par
+54         {\cf19 return} retorno;\par
+55     \}\par
+56 \par
+57     *operacao = -1;   {\cf20 /* A operação é inválida */}\par
+58     {\cf19 return} retorno;\par
+59 \}\par
+}
+}
+}

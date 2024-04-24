@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Detector de deadlock: Código-Fonte de Sistemas Operacionais/Detector de deadlock/multiplasInstancias.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Detector de deadlock
+   </div>
+   <div id="projectbrief">Trabalho da matéria de Sistemas Operacionais</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0fb0ad2b225a8688bb27592a7cbb0da2.html">Sistemas Operacionais</a></li><li class="navelem"><a class="el" href="dir_980721d0317f4c91dab83f09c2e35efa.html">Detector de deadlock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">multiplasInstancias.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="multiplas_instancias_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __MULTIPLASINSTANCIAS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __MULTIPLASINSTANCIAS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="vector_8h.html">vector.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="structmultiplas_instancias.html">    7</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structmultiplas_instancias.html">multiplasInstancias</a>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structmultiplas_instancias.html#ab24b03602eeee66d80756c563d6d871d">    8</a></span>    <span class="keywordtype">int</span> **<a class="code hl_variable" href="structmultiplas_instancias.html#ab24b03602eeee66d80756c563d6d871d">alocacao</a>; <span class="comment">/*&lt; Matriz contendo a quantidade de recursos alocados a cada processo.*/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structmultiplas_instancias.html#adc5dd5ff84355671028766ecddca9785">    9</a></span>    <span class="keywordtype">int</span> **<a class="code hl_variable" href="structmultiplas_instancias.html#adc5dd5ff84355671028766ecddca9785">solicitacao</a>; <span class="comment">/*&lt; Matriz contendo os recursos solicitados concorrentemente por cada processo.*/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structmultiplas_instancias.html#afe812e14e340e916e2f79a8de7f5442f">   10</a></span>    <span class="keywordtype">int</span> *<a class="code hl_variable" href="structmultiplas_instancias.html#afe812e14e340e916e2f79a8de7f5442f">disponivel</a>; <span class="comment">/*&lt; Vetor contendo a quantidade de recursos disponíveis.*/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structmultiplas_instancias.html#aa0198ea478d3692c74d0dd53521d2109">   11</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmultiplas_instancias.html#aa0198ea478d3692c74d0dd53521d2109">quantProcessos</a>; <span class="comment">/*&lt; Variável para armazenar a quantidade de processos envolvidos no algoritmo.*/</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structmultiplas_instancias.html#a0bdb5f9cfb962b5d70c4b07c3afa7e31">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmultiplas_instancias.html#a0bdb5f9cfb962b5d70c4b07c3afa7e31">quantRecursos</a>; <span class="comment">/*&lt;Variável para armazenar a quantidade de recursos envolvidos no algoritmo.*/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">   13</a></span>}<a class="code hl_typedef" href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">MultiplasInstancias</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *<a class="code hl_function" href="multiplas_instancias_8h.html#a009ee23df9fc93d2d6ef72f7f9257031">incializaMultiplasInstancias</a>(<span class="keywordtype">int</span> *disponivel, <span class="keywordtype">int</span> lenDisponivel);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span> <a class="code hl_function" href="multiplas_instancias_8h.html#a45b1715a702a4ebc870bf8f018572eb3">verificaEstado</a>(<a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *m);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a>* <a class="code hl_function" href="multiplas_instancias_8h.html#ae45fc12d3e35f7f0e9f7efff21800d07">inserirProcesso</a>(<a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *m);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a>* <a class="code hl_function" href="multiplas_instancias_8h.html#a5fd1a3332f43e34d99a28784039cd070">solicitaRecurso</a>(<a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *m, <span class="keywordtype">int</span> processo, <span class="keywordtype">int</span> *solicitacao, <span class="keywordtype">int</span> *deadlock, <span class="keywordtype">int</span> *executou);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a>* <a class="code hl_function" href="multiplas_instancias_8h.html#a9cd97921ca05fafb9ce4bb6419d88f1e">desalocaRecurso</a>(<a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *m, <span class="keywordtype">int</span> processo, <span class="keywordtype">int</span> recurso);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="multiplas_instancias_8h.html#a9bdf1f3bd94a7ed7736146ef31be2005">desalocaMultiplasInstancias</a>(<a class="code hl_struct" href="structmultiplas_instancias.html">MultiplasInstancias</a> *m);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_a009ee23df9fc93d2d6ef72f7f9257031"><div class="ttname"><a href="multiplas_instancias_8h.html#a009ee23df9fc93d2d6ef72f7f9257031">incializaMultiplasInstancias</a></div><div class="ttdeci">MultiplasInstancias * incializaMultiplasInstancias(int *disponivel, int lenDisponivel)</div><div class="ttdoc">Função que aloca e inicializa a estrutura de MultiplasInstancias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:6</div></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_a45b1715a702a4ebc870bf8f018572eb3"><div class="ttname"><a href="multiplas_instancias_8h.html#a45b1715a702a4ebc870bf8f018572eb3">verificaEstado</a></div><div class="ttdeci">int verificaEstado(MultiplasInstancias *m)</div><div class="ttdoc">Função que analisa as estruturas e conclui se o sistema está ou não em deadlock.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:28</div></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_a5fd1a3332f43e34d99a28784039cd070"><div class="ttname"><a href="multiplas_instancias_8h.html#a5fd1a3332f43e34d99a28784039cd070">solicitaRecurso</a></div><div class="ttdeci">MultiplasInstancias * solicitaRecurso(MultiplasInstancias *m, int processo, int *solicitacao, int *deadlock, int *executou)</div><div class="ttdoc">Função usada para solicitar um recurso para um processo. Conta com uma função auxiliar para verificar...</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:83</div></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_a9bdf1f3bd94a7ed7736146ef31be2005"><div class="ttname"><a href="multiplas_instancias_8h.html#a9bdf1f3bd94a7ed7736146ef31be2005">desalocaMultiplasInstancias</a></div><div class="ttdeci">void desalocaMultiplasInstancias(MultiplasInstancias *m)</div><div class="ttdoc">Função para liberar a memória da estrutura MultiplasInstancias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:126</div></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_a9cd97921ca05fafb9ce4bb6419d88f1e"><div class="ttname"><a href="multiplas_instancias_8h.html#a9cd97921ca05fafb9ce4bb6419d88f1e">desalocaRecurso</a></div><div class="ttdeci">MultiplasInstancias * desalocaRecurso(MultiplasInstancias *m, int processo, int recurso)</div><div class="ttdoc">Função utilizada para liberar um recurso que o processo está retendo.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:116</div></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_ab94bd593f47aacf7142e953e2d78ba54"><div class="ttname"><a href="multiplas_instancias_8h.html#ab94bd593f47aacf7142e953e2d78ba54">MultiplasInstancias</a></div><div class="ttdeci">struct multiplasInstancias MultiplasInstancias</div><div class="ttdoc">Tipo abstrato de dados para gerenciar as estruturas do algoritmo de multiplas instâncias.</div></div>
+<div class="ttc" id="amultiplas_instancias_8h_html_ae45fc12d3e35f7f0e9f7efff21800d07"><div class="ttname"><a href="multiplas_instancias_8h.html#ae45fc12d3e35f7f0e9f7efff21800d07">inserirProcesso</a></div><div class="ttdeci">MultiplasInstancias * inserirProcesso(MultiplasInstancias *m)</div><div class="ttdoc">Função para inserir um novo processo na estrutura MultiplasIntancias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.c:69</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html"><div class="ttname"><a href="structmultiplas_instancias.html">multiplasInstancias</a></div><div class="ttdoc">Tipo abstrato de dados para gerenciar as estruturas do algoritmo de multiplas instâncias.</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:7</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html_a0bdb5f9cfb962b5d70c4b07c3afa7e31"><div class="ttname"><a href="structmultiplas_instancias.html#a0bdb5f9cfb962b5d70c4b07c3afa7e31">multiplasInstancias::quantRecursos</a></div><div class="ttdeci">int quantRecursos</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:12</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html_aa0198ea478d3692c74d0dd53521d2109"><div class="ttname"><a href="structmultiplas_instancias.html#aa0198ea478d3692c74d0dd53521d2109">multiplasInstancias::quantProcessos</a></div><div class="ttdeci">int quantProcessos</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:11</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html_ab24b03602eeee66d80756c563d6d871d"><div class="ttname"><a href="structmultiplas_instancias.html#ab24b03602eeee66d80756c563d6d871d">multiplasInstancias::alocacao</a></div><div class="ttdeci">int ** alocacao</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:8</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html_adc5dd5ff84355671028766ecddca9785"><div class="ttname"><a href="structmultiplas_instancias.html#adc5dd5ff84355671028766ecddca9785">multiplasInstancias::solicitacao</a></div><div class="ttdeci">int ** solicitacao</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:9</div></div>
+<div class="ttc" id="astructmultiplas_instancias_html_afe812e14e340e916e2f79a8de7f5442f"><div class="ttname"><a href="structmultiplas_instancias.html#afe812e14e340e916e2f79a8de7f5442f">multiplasInstancias::disponivel</a></div><div class="ttdeci">int * disponivel</div><div class="ttdef"><b>Definition:</b> multiplasInstancias.h:10</div></div>
+<div class="ttc" id="avector_8h_html"><div class="ttname"><a href="vector_8h.html">vector.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Detector de deadlock: Código-Fonte de Sistemas Operacionais/Detector de deadlock/vector.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Detector de deadlock
+   </div>
+   <div id="projectbrief">Trabalho da matéria de Sistemas Operacionais</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0fb0ad2b225a8688bb27592a7cbb0da2.html">Sistemas Operacionais</a></li><li class="navelem"><a class="el" href="dir_980721d0317f4c91dab83f09c2e35efa.html">Detector de deadlock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">vector.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="vector_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __VECTOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __VECTOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="vector_8h.html#acef2d840b128f000f65005c34239621b">    5</a></span><span class="keywordtype">int</span>* <a class="code hl_function" href="vector_8h.html#acef2d840b128f000f65005c34239621b">copiaVetor</a>(<span class="keywordtype">int</span> *vet, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="vector_8h.html#a52abd3fee86606b3cc02aaece7eb708d">    8</a></span><span class="keywordtype">int</span>** <a class="code hl_function" href="vector_8h.html#a52abd3fee86606b3cc02aaece7eb708d">copiaMatriz</a>(<span class="keywordtype">int</span> **m, <span class="keywordtype">int</span> quantLinhas, <span class="keywordtype">int</span> quantColunas);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">   11</a></span><span class="keywordtype">int</span>** <a class="code hl_function" href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a>(<span class="keywordtype">int</span> **m, <span class="keywordtype">int</span> *vetor, <span class="keywordtype">int</span> posicaoInsercao, <span class="keywordtype">int</span> lenVet);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">   14</a></span><span class="keywordtype">int</span> *<a class="code hl_function" href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a>(<span class="keywordtype">int</span> *v, <span class="keywordtype">int</span> valor, <span class="keywordtype">int</span> *lenVet);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="vector_8h.html#a40e49aa2dc8b129f3a9a0a914d561e5b">   17</a></span><span class="keywordtype">int</span>* <a class="code hl_function" href="vector_8h.html#a40e49aa2dc8b129f3a9a0a914d561e5b">subtracaoVetores</a>(<span class="keywordtype">int</span> *vet1, <span class="keywordtype">int</span> *vet2, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="vector_8h.html#af25bbaafe2b6f9c03d23cc7eff8b08be">   20</a></span><span class="keywordtype">int</span>* <a class="code hl_function" href="vector_8h.html#af25bbaafe2b6f9c03d23cc7eff8b08be">somaVetores</a>(<span class="keywordtype">int</span> *vet1, <span class="keywordtype">int</span> *vet2, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="vector_8h.html#a495963d556fd3080668b2a47cdcd77bb">   23</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a495963d556fd3080668b2a47cdcd77bb">menorIgual</a>(<span class="keywordtype">int</span> *vet1, <span class="keywordtype">int</span> *vet2, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="vector_8h.html#afa20a85d32e51f3b031d0c2fea0cc5c1">   26</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#afa20a85d32e51f3b031d0c2fea0cc5c1">igual</a>(<span class="keywordtype">int</span> *vet1, <span class="keywordtype">int</span> *vet2, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="vector_8h.html#ab52db69044cbe476c2671f4a5d89ec72">   29</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab52db69044cbe476c2671f4a5d89ec72">ehNulo</a>(<span class="keywordtype">int</span> *v, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="vector_8h.html#a774b353d283bebe11ccb6394baa620c3">   32</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a774b353d283bebe11ccb6394baa620c3">incrementaVetor</a>(<span class="keywordtype">int</span> *vetor, <span class="keywordtype">int</span> len, <span class="keywordtype">int</span> max);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="vector_8h.html#a41609381ce6fad70e0058369257540f6">   35</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a41609381ce6fad70e0058369257540f6">menorQueConstante</a>(<span class="keywordtype">int</span> *v, <span class="keywordtype">int</span> lenV, <span class="keywordtype">int</span> constante);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="avector_8h_html_a2ba08d54f803b8d807f6c684ce2f1c34"><div class="ttname"><a href="vector_8h.html#a2ba08d54f803b8d807f6c684ce2f1c34">expandirMatriz</a></div><div class="ttdeci">int ** expandirMatriz(int **m, int *vetor, int posicaoInsercao, int lenVet)</div><div class="ttdoc">Realoca a matriz passada como parâmetro adicionando ao final da mesma um vetor passado como parâmetro...</div></div>
+<div class="ttc" id="avector_8h_html_a40e49aa2dc8b129f3a9a0a914d561e5b"><div class="ttname"><a href="vector_8h.html#a40e49aa2dc8b129f3a9a0a914d561e5b">subtracaoVetores</a></div><div class="ttdeci">int * subtracaoVetores(int *vet1, int *vet2, int len)</div><div class="ttdoc">Retorna um ponteiro para o vetor resultado entre a subtração do vet1 e vet2.</div></div>
+<div class="ttc" id="avector_8h_html_a41609381ce6fad70e0058369257540f6"><div class="ttname"><a href="vector_8h.html#a41609381ce6fad70e0058369257540f6">menorQueConstante</a></div><div class="ttdeci">int menorQueConstante(int *v, int lenV, int constante)</div><div class="ttdoc">Retorna 1 se algum valor de v for menor que a constante.</div></div>
+<div class="ttc" id="avector_8h_html_a495963d556fd3080668b2a47cdcd77bb"><div class="ttname"><a href="vector_8h.html#a495963d556fd3080668b2a47cdcd77bb">menorIgual</a></div><div class="ttdeci">int menorIgual(int *vet1, int *vet2, int len)</div><div class="ttdoc">Verifica se todos os elementos do vetor1 são menores ou iguais aos do vetor 2. Caso sejam,...</div></div>
+<div class="ttc" id="avector_8h_html_a52abd3fee86606b3cc02aaece7eb708d"><div class="ttname"><a href="vector_8h.html#a52abd3fee86606b3cc02aaece7eb708d">copiaMatriz</a></div><div class="ttdeci">int ** copiaMatriz(int **m, int quantLinhas, int quantColunas)</div><div class="ttdoc">Cria e retorna um ponteiro para cópia da matriz passada como parâmetro.</div></div>
+<div class="ttc" id="avector_8h_html_a774b353d283bebe11ccb6394baa620c3"><div class="ttname"><a href="vector_8h.html#a774b353d283bebe11ccb6394baa620c3">incrementaVetor</a></div><div class="ttdeci">void incrementaVetor(int *vetor, int len, int max)</div><div class="ttdoc">Função auxiliar que realiza o incremento de cada posição do vetor até o max.</div></div>
+<div class="ttc" id="avector_8h_html_ab52db69044cbe476c2671f4a5d89ec72"><div class="ttname"><a href="vector_8h.html#ab52db69044cbe476c2671f4a5d89ec72">ehNulo</a></div><div class="ttdeci">int ehNulo(int *v, int len)</div><div class="ttdoc">Verifica se todos os elementos do vetor v são iguais a 0. Caso sejam, retorna 1, caso não sejam,...</div></div>
+<div class="ttc" id="avector_8h_html_acef2d840b128f000f65005c34239621b"><div class="ttname"><a href="vector_8h.html#acef2d840b128f000f65005c34239621b">copiaVetor</a></div><div class="ttdeci">int * copiaVetor(int *vet, int len)</div><div class="ttdoc">Cria e retorna um ponteiro para cópia do vetor passado como parâmetro.</div></div>
+<div class="ttc" id="avector_8h_html_aeb01699d6370ab4cc4ba20ae5b427e18"><div class="ttname"><a href="vector_8h.html#aeb01699d6370ab4cc4ba20ae5b427e18">expandirVetor</a></div><div class="ttdeci">int * expandirVetor(int *v, int valor, int *lenVet)</div><div class="ttdoc">Realoca o vetor passado como parâmetro adicionando o inteiro ao final do mesmo.</div></div>
+<div class="ttc" id="avector_8h_html_af25bbaafe2b6f9c03d23cc7eff8b08be"><div class="ttname"><a href="vector_8h.html#af25bbaafe2b6f9c03d23cc7eff8b08be">somaVetores</a></div><div class="ttdeci">int * somaVetores(int *vet1, int *vet2, int len)</div><div class="ttdoc">Retorna um ponteiro para o vetor resultado entre a soma do vet1 e vet2.</div></div>
+<div class="ttc" id="avector_8h_html_afa20a85d32e51f3b031d0c2fea0cc5c1"><div class="ttname"><a href="vector_8h.html#afa20a85d32e51f3b031d0c2fea0cc5c1">igual</a></div><div class="ttdeci">int igual(int *vet1, int *vet2, int len)</div><div class="ttdoc">Verifica se todos os elementos do vetor1 são iguais aos do vetor 2. Caso sejam, retorna 1....</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>
